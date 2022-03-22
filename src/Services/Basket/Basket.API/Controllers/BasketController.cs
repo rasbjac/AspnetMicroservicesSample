@@ -17,7 +17,7 @@ namespace Basket.API.Controllers
         {
             _repository = repository ?? throw new ArgumentException(nameof(repository));
         }
-
+         
         [HttpGet("{userName}", Name = "GetBasket")]
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> GetBasket(string userName)
@@ -29,6 +29,9 @@ namespace Basket.API.Controllers
         [HttpPost]
         public async Task<ActionResult<ShoppingCart>> UpdateBasket([FromBody] ShoppingCart basket)
         {
+            //TODO : Communicate with Discount.Grpc
+            // and Calculate latest price of product into shopping cart.
+
             return Ok(await _repository.UpdateBasket(basket));
         }
 

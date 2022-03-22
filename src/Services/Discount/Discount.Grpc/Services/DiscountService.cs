@@ -15,7 +15,7 @@ namespace Discount.Grpc.Services
         private readonly IMapper _mapper;
         private readonly ILogger<DiscountService> _logger;
 
-        public DiscountService(IDiscountRepository repository, IMapper mapper, ILogger<DiscountService> logger, )
+        public DiscountService(IDiscountRepository repository, IMapper mapper, ILogger<DiscountService> logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
