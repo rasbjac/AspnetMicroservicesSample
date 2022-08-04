@@ -131,13 +131,11 @@
         //Plus & Minus for Quantity product
         $(document).ready(function () {
             var quantity = 1;
-
             $('.quantity-right-plus').click(function (e) {
                 e.preventDefault();
                 var quantity = parseInt($('#quantity').val());
                 $('#quantity').val(quantity + 1);
             });
-
             $('.quantity-left-minus').click(function (e) {
                 e.preventDefault();
                 var quantity = parseInt($('#quantity').val());
@@ -145,17 +143,13 @@
                     $('#quantity').val(quantity - 1);
                 }
             });
-
         });
-
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function() {
         'use strict';
-
         window.addEventListener('load', function() {
           // Fetch all the forms we want to apply custom Bootstrap validation styles to
           var forms = document.getElementsByClassName('needs-validation');
-
           // Loop over them and prevent submission
           var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {
@@ -168,11 +162,8 @@
           });
         }, false);
         })();
-
     </script>
 
     @RenderSection("Scripts", required: false)
 </body>
 </html>
-
-
